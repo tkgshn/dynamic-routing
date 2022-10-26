@@ -21,16 +21,17 @@ export default function memberPage() {
         <div>
         <ul>
             {users.map(user => (
-            <li key={user.id}>
-                    ID: {user.id}
+              //user.idだと弾かれる
+            <li key={user["id"]}>
+                    ID: {user["id"]}
                     <br></br>
-                    名前: {user.name}
+                    名前: {user["name"]}
                     <br></br>
-                    メールアドレス: {user.email}
+                    メールアドレス: {user["email"]}
                     {/* ここで詳細のpost/{user.id}に飛ばす */}
                     <br></br>
                     {/* <Link href="post/${user.id}"> */}
-                    <Link href={`/post/${encodeURIComponent(user.id)}`}>
+                    <Link href={`/post/${encodeURIComponent(user["id"])}`}>
                         <a>この人の詳細を見る</a>
                     </Link>
                 </li>
@@ -40,3 +41,4 @@ export default function memberPage() {
         </>
   )
 }
+
