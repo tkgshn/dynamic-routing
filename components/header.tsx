@@ -1,3 +1,4 @@
+// これはnextが提供してるリンクの方法？
 import Link from 'next/link'
 
 export default function Header() {
@@ -15,6 +16,7 @@ export default function Header() {
           </Link>
         </li>
         <li>
+          {/* 割と普通のリンク記法、`First Post`がpost/firstに遷移するよというだけの話 */}
           <Link href="/post/first">
             <a>First Post</a>
           </Link>
