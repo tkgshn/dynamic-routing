@@ -15,15 +15,10 @@ export default function Header() {
             <a>About</a>
           </Link>
         </li>
+        
         <li>
-          {/* 割と普通のリンク記法、`First Post`がpost/firstに遷移するよというだけの話 */}
-          <Link href="/post/first">
-            <a>First Post</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/post/second">
-            <a>Second Post</a>
+          <Link href="/member">
+            <a>メンバ一覧を見る</a>
           </Link>
         </li>
       </ul>

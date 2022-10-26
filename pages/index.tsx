@@ -6,7 +6,7 @@ export default function IndexPage() {
     <>
     {/* そして？https://dynamic-routing-beta-ten.vercel.app/を見ればわかるけど、ヘッダーは共通になっている */}
       <Header />
-      <h1>Hello World!</h1>
+      <h1>こんにちは!</h1>
     </>
   )
 }
