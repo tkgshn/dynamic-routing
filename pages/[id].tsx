@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Header from '../components/header'
 
+
 // post：getStaticPropsから取得したデータ
-export default ({ post }) => {
+export default ({post}: {post:any}) => {
   return (
     <>
       <Header />
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
   const posts = await res.json()  
 
   // 事前ビルドしたいパスを指定
-  const paths = posts.map((post) => ({
+  const paths = posts.map(({post}: {post:any}) => ({
     params: {
       // ファイル名と合わせる ※文字列指定
       id: post.id.toString(),
@@ -35,7 +36,7 @@ export const getStaticPaths = async () => {
 }
 
 // paramsには上記pathsで指定した値が入る（1postずつ）
-export const getStaticProps = async ({ params }) => {  
+export const getStaticProps = async ({ params }: {params: any}) => {  
   // 外部APIエンドポイントを呼び出しデータ取得
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
   const post = await res.json()  
