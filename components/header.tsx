@@ -17,8 +17,8 @@ export default function Header() {
         </li>
         
         <li>
-          <Link href="/member">
-            <a>メンバ一覧を見る</a>
+          <Link href="/post">
+            <a>投稿一覧を見る</a>
           </Link>
         </li>
       </ul>
